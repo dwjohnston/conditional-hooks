@@ -25,7 +25,7 @@ function useHookB(value: number): Array<string> {
 
 function App() {
 
-  const number = useHookA(); 
+  const number = useHookA(); // Returns a number | null 
 
   if(!number){
     return null;

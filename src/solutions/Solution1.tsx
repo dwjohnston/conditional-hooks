@@ -23,8 +23,7 @@ function useHookB(value: number): Array<string> {
 
 
 function AppInner(props: { number: number }) {
-  const values = useHookB(props.number); //React Hook "useHookB" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?eslintreact-hooks/rules-of-hooks
-
+  const values = useHookB(props.number); 
   return (
     <div className="App">
       {values.map((v) => v)}
@@ -41,9 +40,6 @@ function AppOuter() {
   }
 
   return <AppInner number={number} />
-
-
-
 }
 
 export default AppOuter;
